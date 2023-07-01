@@ -4,7 +4,6 @@ import { parse } from "twemoji-parser";
 export async function GET(req, res) {
   try {
     const url = new URL(req.url, `${req.protocol}://${req.headers.host}`);
-    console.log(url.pathname);
     const emoji = url.searchParams.get("emoji");
     const parsedEmoji = parse(emoji ? emoji : decodeURIComponent(url.pathname));
 
