@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { parse } from "twemoji-parser";
+import { parse } from '@twemoji/parser';
 
 export async function GET(req, res) {
   try {
